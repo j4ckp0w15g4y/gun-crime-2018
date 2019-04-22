@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
+import CrimesList from "./components/CrimesList/CrimesList";
+import Map from "./components/Map/Map"
 
-const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+let url = 'https://data.cityofnewyork.us/resource/5ucz-vwe8.json?$limit=100';
 
-let url = 'https://data.cityofnewyork.us/resource/5ucz-vwe8.json';
+//Don't forget to change the limit with Mick
 
 class App extends Component {
   constructor() {
@@ -40,7 +42,7 @@ class App extends Component {
           <Map component={Map} crimeData={crimeData} />
           </div>
          <div className="crimeContainer">
-          <h1 className="is-size-4">Crimes: </h1>
+          <h1 className="is-size-4">Instances of gun crime: </h1>
             <CrimesList crimeData={crimeData} />
         </div>
       
