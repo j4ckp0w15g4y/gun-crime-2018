@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SubmitForm extends Component {
+class SubmitFormBorough extends Component {
     render() {           
         return(
             <div className="submit-area">
@@ -15,6 +15,9 @@ class SubmitForm extends Component {
                 </select>               
                 </form>
             </div>
+
+
+
 
 
             
@@ -38,4 +41,4 @@ class SubmitForm extends Component {
     }
 }
 
-export default SubmitForm
+export default SubmitFormBorough
