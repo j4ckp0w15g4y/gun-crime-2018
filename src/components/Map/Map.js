@@ -11,10 +11,8 @@ class Map extends Component {
     super()
     this.state = {
       viewport: {
-        width: 600,
-        //maybe window.innerwidth
-        height: 600,
-        //maybe window.innerheight
+        width: 400,      
+        height: 400,
         latitude: 40.730610,
         longitude: -73.935242,
         zoom: 11
@@ -62,7 +60,8 @@ _renderPopup() {
         const { viewport } = this.state;
         const crimedata = this.props.crimeData
                 
-       return (         
+       return (     
+        <div className="center-map"> 
          <ReactMapGL
            width={viewport.width}
            height={viewport.height}
@@ -79,7 +78,9 @@ _renderPopup() {
 
             { this.state.popupInfo && this._renderPopup()}
 
-           </ReactMapGL>         
+           </ReactMapGL>  
+           </div>
+            
        );
      }
    }

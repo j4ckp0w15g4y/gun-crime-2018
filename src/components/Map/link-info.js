@@ -4,11 +4,18 @@ class CrimeInfo extends PureComponent {
 
   render() {
     const { info } = this.props;
-    const displayName = `${info.location_desc}`;
+    const location = `${info.location_desc}`;
+    const borough = `${info.boro}`;
+    const date = `${info.occur_date}`;
+    const time = `${info.occur_time}`;
+
 
     return (
       <div>
-        <div>{displayName}</div>
+        <div>Location description: {location}</div>
+        <div>Borough: {borough} </div>
+        <div>Date: {date.slice(0, 10)} </div>
+        <div>Time: {time}</div>
       </div>
     )
 

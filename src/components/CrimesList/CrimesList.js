@@ -11,7 +11,8 @@ const CrimesList = (props) => {
         )    
 
     return (   
-        <div>{crimes}</div>
+        //<div>{crimes}</div>
+        <div></div>
     )
 }
 
