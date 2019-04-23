@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import CrimesList from "../CrimesList/CrimesList";
 import Map from "../Map/Map"
-import SubmitForm from "../SubmitForm/SubmitForm"
+import SubmitFormBorough from "../SubmitForm/SubmitFormBorough"
 
 
 //&boro=${this.state.borough}';
@@ -16,8 +16,8 @@ class HomePage extends Component {
     super();
     this.state = {
       crimes: [],
-      borough: ''
-
+      borough: '',
+      //month: 0
     }
   }
 
@@ -58,8 +58,8 @@ class HomePage extends Component {
       <div className="App">
         <div className="container is-fluid">
         <div className="notification">
-        <h1 className="is-size-4">NYC Shooting Incident Data Map (2018)</h1>
-        <SubmitForm submitFunc={this.submitFunc} />
+        <h1 className="is-size-4"><strong>NYC Shooting Incident Data Map (2018)</strong></h1>
+        <SubmitFormBorough submitFunc={this.submitFunc} />
         <br />
         <div className="mapContainer" isAlign="center">
           <Map component={Map} crimeData={crimeData} />
