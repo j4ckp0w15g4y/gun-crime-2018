@@ -16,6 +16,7 @@ class CrimeInfo extends PureComponent {
         <div>Borough: {borough} </div>
         <div>Date: {date.slice(0, 10)} </div>
         <div>Time: {time}</div>
+        {/* time.slice(0, 5) or something IDK how to figure this out */}
       </div>
     )
 

@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-// import './App.css';
+import '../../App.css';
 import axios from 'axios'
-import CrimesList from "../CrimesList/CrimesList";
 import Map from "../Map/Map"
 import SubmitFormBorough from "../SubmitForm/SubmitFormBorough"
 
 
 //&boro=${this.state.borough}';
-
-
-//Don't forget to change the limit with Mick
 
 class HomePage extends Component {
   constructor() {
@@ -69,18 +65,17 @@ class HomePage extends Component {
         </div>
 
         <div className="column">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2><strong>Resources</strong></h2>
+        <br/>
+        <p>New York Times: <a className="resource-link" href="https://www.nytimes.com/2019/04/02/nyregion/murders-brooklyn-gangs-nyc.html" target="_blank" rel="noopener noreferrer">What's Behind the Murder Spike in Brooklyn?</a></p>
+        <br />
+        <p>NPR: <a className="resource-link" href="https://www.npr.org/2018/10/17/658084556/new-york-city-had-its-first-weekend-without-a-shooting-in-25-years" target="_blank" rel="noopener noreferrer">New York City Had Its First Weekend Without A Shooting In 25 Years</a></p>
+        <br />
+        <p>New Yorker: <a className="resource-link" href="https://www.newyorker.com/magazine/2019/02/04/will-the-supreme-court-use-a-new-york-city-regulation-to-strike-down-gun-laws" target="_blank" rel="noopener noreferrer">Will the Supreme Court Use a New York City Regulation to Strike Down Gun Laws?</a></p>
         </div>
         </div>
 
-      {/* NEED TO WORK ON DATE FILTER, NEED TO WORK ON BULMA SUBMIT, NEED TO MOVE MAP TO LOCATION OF THE AREA */}
-
-
-        <div className="crimeContainer">
-          {/* <h1 className="is-size-4">Shooting Incident Data</h1> */}
-          <CrimesList crimeData={crimeData} />
-        </div>
-        {/* <SubmitForm submitFunc={this.submitFunc} /> */}
+      {/* NEED TO WORK ON DATE FILTER, NEED TO WORK ON BULMA SUBMIT, NEED TO MOVE MAP TO LOCATION OF THE AREA */}        
       </div>
     </div>
     </div>  

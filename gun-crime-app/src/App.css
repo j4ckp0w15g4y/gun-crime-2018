@@ -1,6 +1,17 @@
-.center-map {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center; 
-        align-items: center;     
+.mapboxgl-popup {
+    font-size: .75em;
 }
+
+.select {
+    align-content: right;
+    margin-bottom: 10px;
+}
+
+.resource-link {
+    font-style: italic;
+}
+
+/* .footer {
+    position: absolute;
+    bottom: 0;
+} */
