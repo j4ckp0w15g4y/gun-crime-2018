@@ -10,7 +10,7 @@ function AboutPage(props) {
             <br />
             <p>The map itself was created using Uber's React components for Mapbox GL.</p>
             <br />
-            <p>If you would like to access the API directly, and read more documentation regarding the source, please click <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8" target="_blank">here</a></p>
+            <p>If you would like to access the API directly, and read more documentation regarding the source, please click <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8" target="_blank" rel="noopener noreferrer">here</a></p>
           </div>
         </div>    
 

@@ -30,7 +30,7 @@ _renderMarker(crimedata, i) {
     return (
         <Marker key={`crimedata-${i}`} longitude={long} latitude={lat} >  
   <CrimePin 
-    size={20} 
+    size={15} 
     onClick={() => 
       this.setState({popupInfo: crimedata})} 
       />

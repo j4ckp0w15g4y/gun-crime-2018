@@ -11,6 +11,8 @@
 # production
 /build
 
+UnusedComponents
+
 # misc
 .DS_Store
 .env

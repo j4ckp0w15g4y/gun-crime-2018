@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SubmitFormBorough extends Component {
     render() {           
         return(
-            <div className="submit-area">
+            <div className="select is-rounded is-small is-right">
             <form>            
                 <select type="text" onChange={this.props.submitFunc} value={this.props.borough}> 
                     <option value=''>Select Borough</option>               
@@ -15,28 +15,6 @@ class SubmitFormBorough extends Component {
                 </select>               
                 </form>
             </div>
-
-
-
-
-
-            
-           
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
         )
     }
 }
