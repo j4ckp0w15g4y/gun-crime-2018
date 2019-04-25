@@ -1,12 +1,17 @@
 # gun-crime-2018
 
+# NYC Shooting Incident Data Map (2018)
+
+
 An application which maps the locations of instances of shootings which occurred in 2018.
 
 I am fetching data from the NYPD Data API: 
 
 https://data.cityofnewyork.us/resource/5ucz-vwe8.json
 
+# Component Tree
 
+![alt text] (https://user-images.githubusercontent.com/46265220/56756048-e9496980-675e-11e9-88da-54c965025426.jpg)
 
 
 # Images from my Project
