@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import CrimePin from './crime-pin';
 import CrimeInfo from './link-info'
@@ -11,7 +11,7 @@ class Map extends Component {
     super()
     this.state = {
       viewport: {
-        width: 600,      
+        width: 600,
         height: 400,
         latitude: 40.730610,
         longitude: -73.935242,
@@ -24,65 +24,65 @@ class Map extends Component {
   };
 
 
-_renderMarker(crimedata, i) {
-  const lat = Number(crimedata.latitude)
-  const long = Number(crimedata.longitude)
+  _renderMarker(crimedata, i) {
+    const lat = Number(crimedata.latitude)
+    const long = Number(crimedata.longitude)
     return (
-        <Marker key={`crimedata-${i}`} longitude={long} latitude={lat} >  
-  <CrimePin 
-    size={15} 
-    onClick={() => 
-      this.setState({popupInfo: crimedata})} 
-      />
-        
-       </Marker>
+      <Marker key={`crimedata-${i}`} longitude={long} latitude={lat} >
+        <CrimePin
+          size={15}
+          onClick={() =>
+            this.setState({ popupInfo: crimedata })}
+        />
 
-      );
+      </Marker>
+
+    );
+  }
+
+  _renderPopup() {
+    const { popupInfo } = this.state;
+    const lat = Number(popupInfo.latitude)
+    const lng = Number(popupInfo.longitude)
+    return (
+      <Popup tipSize={5}
+        anchor="top"
+        longitude={lng}
+        latitude={lat}
+        onClose={() => this.setState({ popupInfo: null })} >
+        <CrimeInfo info={popupInfo} />
+      </Popup>
+    )
+  }
+
+
+  render() {
+    const { viewport } = this.state;
+    const crimedata = this.props.crimeData
+
+    return (
+      <div className="center-map">
+        <ReactMapGL
+          width={viewport.width}
+          height={viewport.height}
+          latitude={viewport.latitude}
+          longitude={viewport.longitude}
+          zoom={viewport.zoom}
+
+          mapStyle="mapbox://styles/mapmen/cjusnru4s22nz1frvcf7fd1vy"
+
+          onViewportChange={(viewport) => this.setState({ viewport })}
+          mapboxApiAccessToken={MAPBOX_TOKEN}>
+
+          {crimedata.map(this._renderMarker)}
+
+          {this.state.popupInfo && this._renderPopup()}
+
+        </ReactMapGL>
+      </div>
+
+    );
+  }
 }
 
-_renderPopup() {
-  const { popupInfo } = this.state;
-  const lat = Number(popupInfo.latitude)
-  const lng = Number(popupInfo.longitude)
-  return (
-    <Popup tipSize={5}
-      anchor="top"
-      longitude={lng}
-      latitude={lat}
-      onClose={() => this.setState({popupInfo: null})} >
-      <CrimeInfo info={popupInfo} />
-    </Popup>
-  )
-}
-
-
-    render() {          
-        const { viewport } = this.state;
-        const crimedata = this.props.crimeData
-                
-       return (     
-        <div className="center-map"> 
-         <ReactMapGL
-           width={viewport.width}
-           height={viewport.height}
-           latitude={viewport.latitude}
-           longitude={viewport.longitude}
-           zoom={viewport.zoom}
-           
-           mapStyle="mapbox://styles/mapmen/cjusnru4s22nz1frvcf7fd1vy"
-          
-           onViewportChange={(viewport) => this.setState({viewport})}
-           mapboxApiAccessToken={MAPBOX_TOKEN}>
-
-            {crimedata.map(this._renderMarker)}
-
-            { this.state.popupInfo && this._renderPopup()}
-
-           </ReactMapGL>  
-           </div>
-            
-       );
-     }
-   }
-       
-   export default Map;
+export default Map;
