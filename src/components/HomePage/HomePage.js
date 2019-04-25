@@ -54,7 +54,7 @@ class HomePage extends Component {
       <div className="App">
         <div className="container is-fluid">
         <div className="notification">
-        <h1 className="is-size-4"><strong>NYC Shooting Incident Data Map (2018)</strong></h1>
+        <h1 className="is-size-2"><strong>NYC Shooting Incident Data Map (2018)</strong></h1>
         <SubmitFormBorough submitFunc={this.submitFunc} />
         <br />
         <div className="columns">
