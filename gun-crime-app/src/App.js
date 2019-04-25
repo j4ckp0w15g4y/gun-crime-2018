@@ -22,10 +22,11 @@ class App extends Component {
       
          <main>
           <Route exact path="/" component={HomePage}/>
-            <Route path="/about" component={AboutPage}/>         
+            <Route path="/about" component={AboutPage}/>             
           </main>
-        <Footer />
-      
+          <footer>            
+          <Footer />
+          </footer>                                          
       </div>
     )
   }

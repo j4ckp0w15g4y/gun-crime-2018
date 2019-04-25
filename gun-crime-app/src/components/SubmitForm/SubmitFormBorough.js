@@ -7,7 +7,7 @@ class SubmitFormBorough extends Component {
             <form>            
                 <select type="text" onChange={this.props.submitFunc} value={this.props.borough}> 
                     <option value=''>Select Borough</option>               
-                    <option value="BRONX">Bronx</option>
+                    <option value="BRONX">The Bronx</option>
                     <option value="QUEENS">Queens</option>
                     <option value="MANHATTAN">Manhattan</option>
                     <option value="BROOKLYN">Brooklyn</option>                        
