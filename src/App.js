@@ -10,23 +10,23 @@ class App extends Component {
   render() {
     return (
       <div>
-  
+
         <nav className="navbar is-black" role="navigation" aria-label="main navigation">
-          <div className="navbar-brand">            
+          <div className="navbar-brand">
             <Link className="navbar-item" to="/">Home</Link>
             <Link className="navbar-item" to="/about">About</Link>
-            
-          </div>                                                   
-         </nav>
-         
-      
-         <main>
-          <Route exact path="/" component={HomePage}/>
-            <Route path="/about" component={AboutPage}/>             
-          </main>
-          <footer>            
+
+          </div>
+        </nav>
+
+
+        <main>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+        </main>
+        <footer>
           <Footer />
-          </footer>                                          
+        </footer>
       </div>
     )
   }
