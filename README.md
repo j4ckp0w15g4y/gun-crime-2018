@@ -9,7 +9,7 @@ https://data.cityofnewyork.us/resource/5ucz-vwe8.json
 
 
 
-#Images from my Project
+# Images from my Project
 
 ![alt text](https://user-images.githubusercontent.com/46265220/56751820-e9dd0280-6754-11e9-90dc-b893a1c251b3.png)
 
