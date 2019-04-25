@@ -4,9 +4,6 @@ import axios from 'axios'
 import Map from "../Map/Map"
 import SubmitFormBorough from "../SubmitForm/SubmitFormBorough"
 
-
-//&boro=${this.state.borough}';
-
 class HomePage extends Component {
   constructor() {
     super();
