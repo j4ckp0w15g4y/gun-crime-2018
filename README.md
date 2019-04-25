@@ -11,7 +11,7 @@ https://data.cityofnewyork.us/resource/5ucz-vwe8.json
 
 # Component Tree
 
-![alt text] (https://user-images.githubusercontent.com/46265220/56756048-e9496980-675e-11e9-88da-54c965025426.jpg)
+![alt text](https://user-images.githubusercontent.com/46265220/56756048-e9496980-675e-11e9-88da-54c965025426.jpg)
 
 
 # Images from my Project
