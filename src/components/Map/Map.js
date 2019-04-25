@@ -60,6 +60,8 @@ class Map extends Component {
     const { viewport } = this.state;
     const crimedata = this.props.crimeData
 
+    console.log(MAPBOX_TOKEN)
+
     return (
       <div className="center-map">
         <ReactMapGL
